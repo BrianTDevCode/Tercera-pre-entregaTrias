@@ -1,0 +1,15 @@
+{% extends 'consesionario/padre.html' %}
+
+{% block contenidoAddCar %}
+
+
+
+    
+<h3 style="margin-bottom: 20px;">Añadir Cliente</h3>
+        <form action="/customers/" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Guardar">
+        </form>
+  
+{% endblock %}
