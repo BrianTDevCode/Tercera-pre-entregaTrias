@@ -27,5 +27,5 @@ class Auto(models.Model):
     
 
     def __str__(self):
-        return f"{self.marca} {self.moldelo} {self.color} {self.precio} "
+        return f"{self.marca} {self.modelo} {self.color} {self.precio} "
 

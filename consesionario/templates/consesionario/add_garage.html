@@ -1,12 +1,12 @@
 {% extends 'consesionario/padre.html' %}
 
-{% block contenidoAddCar %}
+{% block contenido %}
 
 
 
     
 <h3 style="margin-bottom: 20px;">Añadir Sucursal</h3>
-        <form action="/garages/" method="POST">
+        <form action="/garage/" method="POST">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Guardar">

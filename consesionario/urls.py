@@ -7,9 +7,9 @@ app_name = "consesionario"
 
 urlpatterns = [
     path("", views.home, name='index'),
-    path("customers/", views.customers_view, name='customers'),
-    path("garages/", views.garages_view, name='garages'),
-    path("cars/", views.cars_view, name='cars'),
-    path("search/", views.home, name='search'),
+    path("customer/", views.customers_view, name='customers'),
+    path("garage/", views.garages_view, name='garages'),
+    path("car/", views.cars_view, name='cars'),
+    path("list/", views.list_view, name='list'),
 
 ]

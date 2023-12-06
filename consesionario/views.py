@@ -6,8 +6,16 @@ from . forms import *
 def home(req):
     return render(req,'consesionario/index.html')
 
-def search(req):
-    return render(req,'consesionario/search.html')
+def list_view(req):
+
+   
+    cars = Auto.objects.all();
+    customers = Cliente.objects.all();
+    garages = Sucursal.objects.all();
+
+   
+
+    return render(req,'consesionario/list.html',{"cars":cars,"customers":customers,"garages":garages})
 
 def customers_view(request):
      
