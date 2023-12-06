@@ -10,7 +10,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
 ## 3 - Activar entorno virtual
 
-py -m venv .\venv
+venv\Scripts\activate
 
 ## 4 - Instalar dependencias
 
@@ -22,8 +22,8 @@ python manage.py runserver
 
 ## Rutas disponibles
 
-/ Index
-/cars  - Añadir auto
-/customer - Añadir cliente
-/garage - Añadir Sucursal
-/list - Listar datos cargados
+- / Index
+- /cars  - Añadir auto
+- /customer - Añadir cliente
+- /garage - Añadir Sucursal
+- /list - Listar datos cargados
