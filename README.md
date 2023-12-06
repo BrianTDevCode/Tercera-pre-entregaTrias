@@ -22,7 +22,7 @@ python manage.py runserver
 
 ## Rutas disponibles
 
-- / Index
+- / - Index
 - /cars  - Añadir auto
 - /customer - Añadir cliente
 - /garage - Añadir Sucursal
