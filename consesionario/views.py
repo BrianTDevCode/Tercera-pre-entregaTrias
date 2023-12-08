@@ -6,16 +6,25 @@ from . forms import *
 def home(req):
     return render(req,'consesionario/index.html')
 
-def list_view(req):
+def search_view(request):
+     
+    if request.method == "GET":
+        form = AutoBuscarFormulario()
+        return render(
+            request,
+            "consesionario/search.html",
+            context={"form": form}
+        )
+    else:
+        formulario = AutoBuscarFormulario(request.POST)
+        if formulario.is_valid():
+            informacion = formulario.cleaned_data
+            autos_filtrados = []
+            for auto in Auto.objects.filter(marca=informacion["marca"]):
+                autos_filtrados.append(auto)
 
-   
-    cars = Auto.objects.all();
-    customers = Cliente.objects.all();
-    garages = Sucursal.objects.all();
-
-   
-
-    return render(req,'consesionario/list.html',{"cars":cars,"customers":customers,"garages":garages})
+            contexto = {"Autos": autos_filtrados}
+            return render(request, "consesionario/autos_list.html", contexto)
 
 def customers_view(request):
      

@@ -1,0 +1,15 @@
+{% extends "consesionario/padre.html" %}
+
+{% block contenido %}
+
+<div class="form-container">
+    <h2>Buscar Auto</h2>
+    <form action="/search/" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Buscar">
+    </form>
+</div>
+{% endblock %}

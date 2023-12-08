@@ -21,3 +21,7 @@ class AutoFormulario(forms.Form):
      color = forms.CharField()
      precio = forms.IntegerField()
 
+class AutoBuscarFormulario(forms.Form):
+    marca = forms.CharField()
+
+

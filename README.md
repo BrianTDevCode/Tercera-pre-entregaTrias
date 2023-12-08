@@ -26,4 +26,4 @@ python manage.py runserver
 - /cars  - Añadir auto
 - /customer - Añadir cliente
 - /garage - Añadir Sucursal
-- /list - Listar datos cargados
+- /seach - Buscar autos por marca
